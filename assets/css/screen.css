@@ -105,6 +105,8 @@ ul.card__tags {
     font-size: 9px;
     margin: 0 2px 2px 0;
     padding: 6px 7px 4px 6px;
+    text-align: center;
+    width: auto; 
 }
 
 @media (max-width: 480px) {
@@ -112,59 +114,25 @@ ul.card__tags {
         font-size: 12px;
         height: 26px;
         margin: 0 4px 4px 0;
+        padding: 6px 8px 4px 9px;
     }
 }
 
 .tag_recommend {
-    background-color: #7558cd;
-    text-align: center;    
-    width: 75px;    
-}
-
-@media (max-width: 480px) {
-    .tag_recommend {            
-        width: 99px;
-    }
+    background-color: #7558cd;       
 }
 
 .tag_novelty {
-    background-color: #62c34b;
-    border-radius: 2px;
-    text-align: center;
-    width: 55px;    
-}
-
-@media (max-width: 480px) {
-    .tag_novelty {            
-        width: 72px;
-    }
+    background-color: #62c34b;       
 }
 
 .tag_action {
-    background-color: #f7d33b;
-    border-radius: 2px; 
-    color: #333333;
-    text-align: center;
-    width: 42px;    
-}
-
-@media (max-width: 480px) {
-    .tag_action {            
-        width: 57px;
-    }
+    background-color: #f7d33b;     
+    color: #333333;   
 }
 
 .tag_hit {
-    background-color: #e74650;
-    border-radius: 2px;
-    text-align: center; 
-    width: 30px;    
-}
-
-@media (max-width: 480px) {
-    .tag_hit {            
-        width: 38px;
-    }
+    background-color: #e74650;       
 }
 
 /*------------------------------description-----------------------------------*/
