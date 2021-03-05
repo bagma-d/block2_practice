@@ -215,8 +215,6 @@ ul.card__tags {
     }
 }
 
-.card__specifications {    
-}
 .specifications {
     display: flex;
     font-size: 9.5px;
@@ -231,24 +229,15 @@ ul.card__tags {
     }
 }
 
-.specifications__name {
-    padding-right: 6px;
+.specifications__name::after {
+    content: '—';
+    padding: 0 7px;
 }
 
 @media (max-width: 480px) {
-    .specifications__name {
-        padding-right: 10px; 
+    .specifications__name::after {
+        padding: 0 12px; 
     }
-}
-
-.specifications__value {
-    padding-left: 7px;
-}
-
-@media (max-width: 480px) {
-    .specifications__value {            
-        padding-left: 15px;
-}
 }
 
 /*------------------------------right-content-----------------------------------*/
