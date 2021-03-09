@@ -11,11 +11,11 @@
 <body>
     <ul class="cards">
         <li class="cards__item card">
-            <div class="card__left-content">
-                <a href="#" class="card__photo"><img src="images/content/06188daa7e30c921ac820cd76c81f99e.png" alt="Backen Ponevira" class="card__photo-img" width="116"></a>
+            <div class="card__preview">
+                <a href="#" class="card__photo"><img src="images/content/06188daa7e30c921ac820cd76c81f99e.png" alt="Backen Ponevira" class="card__photo-img"></a>
                 <ul class="card__tags">
-                    <li class="tags tag_recommend">Мы советуем</li>
-                    <li class="tags tag_novelty">Новинка</li>
+                    <li class="tag tag_recommend">Мы советуем</li>
+                    <li class="tag tag_novelty">Новинка</li>
                 </ul>                 
             </div>  
             <div class="card__description">
@@ -36,7 +36,7 @@
                     </dl>
                 </div>
             </div>
-            <div class="card__right-content">
+            <div class="card__form">
                 <div class="card__state state_expects">Ожидается</div>
                 <div class="card__price">от 6 218 000 р.</div>
                 <form action="#" class="card__quantity-form" method="get">
@@ -54,13 +54,13 @@
             </div>
         </li>
         <li class="cards__item card">
-            <div class="card__left-content">
-                    <a href="#" class="card__photo"><img src="images/content/b733a8118d284c23fddf3bb648321d47.png" alt="Backen Mocen" class="card__photo-img" width="116"></a>
+            <div class="card__preview">
+                    <a href="#" class="card__photo"><img src="images/content/b733a8118d284c23fddf3bb648321d47.png" alt="Backen Mocen" class="card__photo-img"></a>
                     <ul class="card__tags">
-                        <li class="tags tag_action">Акция</li>
-                        <li class="tags tag_recommend">Мы советуем</li>
-                        <li class="tags tag_novelty">Новинка</li>
-                        <li class="tags tag_hit">Хит</li>
+                        <li class="tag tag_action">Акция</li>
+                        <li class="tag tag_recommend">Мы советуем</li>
+                        <li class="tag tag_novelty">Новинка</li>
+                        <li class="tag tag_hit">Хит</li>
                     </ul>                 
             </div> 
             <div class="card__description">
@@ -81,10 +81,10 @@
                     </dl>
                 </div>
             </div>
-            <div class="card__right-content">
+            <div class="card__form">
                 <div class="card__state state_in-stock">В наличии</div>
                 <div class="card__price">от 5 506 000 р.</div>
-                <div class="card__price price-old">5 720 000 р.</div>
+                <div class="card__price price_old">5 720 000 р.</div>
                 <form action="#" class="card__quantity-form" method="get">
                     <div class="card__quantity quantity">
                         <div class="quantity__minus"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
@@ -100,55 +100,6 @@
             </div>
         </li>
     </ul>
-    <script>  
-       
-        window.onload = function () {       
-
-        function inputClick(){
-
-           let priceInput = this.querySelector('.quantity__value'); 
-
-           priceInput.oninput = function(){
-                this.value > 0 ? regex = /[^0-9]/g : regex = /[^1-9]/g;
-                this.value = this.value.replace(regex, '');
-           }           
-        }
-
-        function minusClick(){
-
-            let price = this.parentNode.querySelector('.quantity__value');
-
-            if (price.value <= 1) 
-            price.value = 1;
-            else price.value--;
-            
-        }
-
-        function plusClick(){
-            
-            let price = this.parentNode.querySelector('.quantity__value');
-            price.value++;
-          
-        }
-        
-        let price = document.querySelectorAll('.card__quantity');
-
-        for (i of price) {
-            i.addEventListener("click", inputClick);
-        }
-
-        let minusBtn = document.querySelectorAll('.quantity__minus');
-
-        for (m of minusBtn) {
-            m.addEventListener("click", minusClick);
-        }
-
-        let plusBtn = document.querySelectorAll('.quantity__plus');
-
-        for (p of plusBtn) {
-            p.addEventListener("click", plusClick);
-        }    
-        } 
-    </script>
+    <script src="./assets/js/quantity.js"></script>
 </body>
 </html>
