@@ -150,6 +150,16 @@ ul.card__tags {
     width: 139px;     
 }
 
+.card__price {
+    padding: 12px 0 0;
+}
+
+@media (max-width: 480px) {
+    .card__price {
+        padding: 17px 0 0 1px;
+    }
+}
+
 @media (max-width: 480px) {
     .card__form { 
         display: flex;
@@ -214,6 +224,18 @@ ul.card__tags {
 .card__add-to-cart:hover {
     background-color: #4289e0;
     cursor: pointer;    
+}
+
+.card__feature {    
+    padding: 11px 0 0 0; 
+}
+
+@media (max-width: 480px) {
+    .card__feature {      
+        padding-top: 14px;      
+        position: absolute;
+        right: 37px;
+    }
 }
 
 /*------------------------------tag-----------------------------------*/
@@ -367,14 +389,12 @@ ul.card__tags {
 .price {
     color: #333333;
     font-size: 12.5px;
-    font-weight: bold;
-    padding: 12px 0 0;    
+    font-weight: bold;        
 }
 
 @media (max-width: 480px) {
     .price {            
         font-size: 17px;
-        padding: 17px 0 0 1px;
     }
 }
 
@@ -396,16 +416,7 @@ ul.card__tags {
 
 .feature {
     align-items: flex-start;
-    display: flex;
-    padding: 11px 0 0 0;    
-}
-
-@media (max-width: 480px) {
-    .feature {      
-        padding-top: 14px;      
-        position: absolute;
-        right: 37px;
-    }
+    display: flex;   
 }
 
 .feature__feature-img {
