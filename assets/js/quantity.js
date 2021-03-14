@@ -1,10 +1,10 @@
 window.onload = function () {       
 
     function inputMatrix(){
-
-             this.value = (this.value == "") ? 1 : this.value;
-             let regex = (this.value > 0) ? (/[^0-9]/g) : (/[^1-9]/g);
-             this.value = this.value.replace(regex, '');
+                        
+            let regex = /[^0-9]/g;
+            this.value = this.value.replace(regex, '');
+            this.value = ((this.value == "") || (this.value == 0)) ? 1 : this.value;
                  
      }
 
@@ -24,19 +24,19 @@ window.onload = function () {
     
     let price = document.querySelectorAll('.quantity__value');
 
-    for (i of price) {
-        i.addEventListener("input", inputMatrix);
+    for (let item of price) {
+        item.addEventListener("input", inputMatrix);
     }
 
     let minusBtn = document.querySelectorAll('.quantity__minus');
 
-    for (m of minusBtn) {
-        m.addEventListener("click", minusClick);
+    for (let item of minusBtn) {
+        item.addEventListener("click", minusClick);
     }
 
     let plusBtn = document.querySelectorAll('.quantity__plus');
 
-    for (p of plusBtn) {
-        p.addEventListener("click", plusClick);
+    for (let item of plusBtn) {
+        item.addEventListener("click", plusClick);
     }    
     } 
